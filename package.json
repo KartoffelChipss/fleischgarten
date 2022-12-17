@@ -1,0 +1,23 @@
+{
+  "name": "fleischgarten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KartoffelChipss/fleischgarten.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KartoffelChipss/fleischgarten/issues"
+  },
+  "homepage": "https://github.com/KartoffelChipss/fleischgarten#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
