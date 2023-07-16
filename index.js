@@ -1,13 +1,13 @@
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
-const config = require("./config.json");
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 const crypto = require('crypto');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 var bcrypt = require("bcrypt");
+require("dotenv").config();
 
 const app = express();
 
@@ -24,9 +24,13 @@ app.use(
     }),
 );
 
+mongoose.connect(process.env.MONGO_URI, {
+    keepAlive: true
+}).then(() => console.log("Connected to database"));
+
 app.use(cookieParser());
 
-app.use("/", express.static(path.resolve(`${dataDir}${path.sep}assets`)));
+app.use("/assets", express.static(path.resolve(`${dataDir}${path.sep}assets`)));
 
 const renderTemplate = (res, req, template, data = {}) => {
     // Default base data which passed to the ejs template by default.
@@ -41,9 +45,9 @@ const renderTemplate = (res, req, template, data = {}) => {
 };
 
 app.get("/", (req, res) => {
-    renderTemplate(res, req, "index.ejs");
+    renderTemplate(res, req, "main.ejs");
 })
 
-app.listen(config.port, null, null, () =>
-    console.log(`Fleischgarten is running on port ${config.port}.`),
+app.listen(process.env.PORT, null, null, () =>
+    console.log(`Fleischgarten is running on port ${process.env.PORT}.`),
 );

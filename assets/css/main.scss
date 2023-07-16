@@ -1,0 +1,119 @@
+@import url("./fonts/sora.css");
+@import url("./fonts/ubuntu.css");
+@import url("https://strassburger.org/css/fonts/icons.css");
+
+html {
+    --random-color-1: red;
+    --random-color-2: red;
+    --random-color-3: red;
+}
+
+:root {
+    --grey-1: #1c1d1f;
+    --grey-2: #232527;
+    --grey-3: #111111;
+    --white-1: #fefefe;
+    --white-2: #cecece;
+
+    --letter-spacing: .08rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--grey-1);
+    // background-image: linear-gradient(to right bottom, #1c1d1f, #1d1e21, #1e2022, #202124, #212325, #222426, #242628, #252729, #27292b, #282a2c, #2a2c2e, #2c2e30);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // background-attachment: fixed;
+
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: var(--letter-spacing);
+    color: var(--white-1);
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@supports not selector(:focus-visible) {
+    a:focus, button:focus {
+        color: unset ;
+    }
+    
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    color: inherit;
+    text-decoration: inherit;
+    outline: var(--blue-1) 3px solid;
+    outline-offset: 3px;
+}
+
+button, input, textarea {
+    font-family: 'Sora', sans-serif;
+}
+
+nav {
+    width: 60%;
+
+    padding: 15px 0;
+    border-bottom: var(--random-color-2) 3px solid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    img {
+        height: 90px;
+        width: auto;
+        border-radius: 13px;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: var(--white-1);
+        text-decoration: none;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        a {
+            margin-left: 20px;
+            color: var(--white-1);
+            text-decoration: none;
+            font-size: 24px;
+
+            display: flex;
+            align-items: center;
+
+            svg {
+                height: 30px;
+                width: auto;
+                path {
+                    stroke: var(--white-1);
+                }
+            }
+        }
+    }
+}
