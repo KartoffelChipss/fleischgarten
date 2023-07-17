@@ -1,0 +1,61 @@
+main.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+main.register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 33%;
+}
+main.register form input[type=password], main.register form input[type=text], main.register form input[type=email], main.register form input[type=date], main.register form input[type=number] {
+  background-color: var(--grey-2);
+  border: var(--grey-3) solid 3px;
+  margin: 5px 0;
+  width: calc(100% - 14px);
+  font-size: 18px;
+  font-family: "Sora", sans-serif;
+  padding: 7px;
+  border-radius: 3px;
+  color: var(--white-1);
+}
+main.register form input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+main.register form span.taiwan {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--white-1);
+  font-size: 18px;
+}
+main.register form label {
+  width: 100%;
+  margin-top: 5px;
+}
+main.register form .consentBox {
+  margin: 15px 0;
+  max-width: 500px;
+}
+main.register form .consentBox label {
+  line-height: 1.4;
+}
+main.register form button {
+  background-color: var(--random-color-1);
+  border: none;
+  font-family: "Sora", sans-serif;
+  color: var(--white-1);
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 15px;
+  font-weight: 600;
+  transition: scale 0.2s ease-in-out;
+}
+main.register form button:active {
+  scale: 0.95;
+}
+main.register form button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=user.css.map */

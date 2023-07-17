@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fleischgarten - Crazy Hamburger Kochvideo</title>
+    <meta name="author" content="John Cena">
+    <meta name="description" content="BING CHILING!">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//assetsimg/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/favicon-256x256.png">
+
+    <!--<meta property="og:title" content="Jan Straßburgers Homepage">
+    <meta property="og:site_name" content="Jan Straßburgers Homepage">
+    <meta property="og:url" content="https://strassburger.org/">
+    <meta property="og:description" content="Archiv - Meine Homepage mit meinen Projekten, wie OktoBot, KartoffelBot oder KartoffelMC und Kontaktmöglichkeiten.">
+    <meta property="og:type" content="website">-->
+    <meta property="og:image" content="/assets/img/banner.png">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/user.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("partials/nav.ejs") %>
+
+    <main class="productPage">
+        <%if (message !== "none") {%>
+            <div class="messageBox <%= messageClass %>">
+                <span><%= message %></span>
+            </div>
+        <%}%>
+
+        <h2>Crazy Hamburger Kochvideo</h2>
+        
+        
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="/assets/js/assets.js"></script>
+</body>
+</html>

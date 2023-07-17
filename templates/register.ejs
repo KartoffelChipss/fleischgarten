@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fleischgarten - Registrieren</title>
+    <meta name="author" content="John Cena">
+    <meta name="description" content="BING CHILING!">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//assetsimg/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/favicon-256x256.png">
+
+    <!--<meta property="og:title" content="Jan Straßburgers Homepage">
+    <meta property="og:site_name" content="Jan Straßburgers Homepage">
+    <meta property="og:url" content="https://strassburger.org/">
+    <meta property="og:description" content="Archiv - Meine Homepage mit meinen Projekten, wie OktoBot, KartoffelBot oder KartoffelMC und Kontaktmöglichkeiten.">
+    <meta property="og:type" content="website">-->
+    <meta property="og:image" content="/assets/img/banner.png">
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/user.css" rel="stylesheet">
+</head>
+<body>
+    <%- include("partials/nav.ejs") %>
+
+    <main class="register">
+        <%if (message !== "none") {%>
+            <div class="messageBox <%= messageClass %>">
+                <span><%= message %></span>
+            </div>
+        <%}%>
+
+        <h2>Registrieren</h2>
+        <form method="POST" name="registerForm" id="registerForm">
+            <label for="username">Benutzername</label>
+            <input type="text" required name="username" id="username" form="registerForm" placeholder="Benutzername" maxlength="500">
+            <label for="pwd">Passwort</label>
+            <input type="password" required name="pwd" id="pwd" form="registerForm" placeholder="Passwort" maxlength="500">
+            <label for="pwdTwo">Passwort wiederholen</label>
+            <input type="password" required name="pwdTwo" id="pwdTwo" form="registerForm" placeholder="Passwort wiederholen" maxlength="500">
+            <label for="pwdThree">PASSWORT</label>
+            <input type="password" required name="pwdThree" id="pwdThree" form="registerForm" placeholder="PASSWORT" maxlength="500">
+            <label for="pwdBackwards">Passwort rückwärts</label>
+            <input type="password" required name="pwdBackwards" id="pwdBackwards" form="registerForm" placeholder="Passwort rückwärts" maxlength="500">
+            <label for="pwdsquared">Passwort<sup>2</sup></label>
+            <input type="password" required name="pwdsquared" id="pwdsquared" form="registerForm" placeholder="Passwort<sup>2</sup>fuck" maxlength="500">
+            <label for="">𠏴</label>
+            <input type="text" maxlength="500">
+            <span class="taiwan">Is Taiwan a country?</span>
+            <div class="radioSideBySide" style="margin-bottom: 10px;">
+                <input type="radio" id="taiwanNo" name="taiwanCountry" value="no" form="registerForm">
+                <label for="taiwanNo" style="margin-right: 10px; color: var(--random-color-1);">NO</label>
+                <input type="radio" id="taiwanYes" name="taiwanCountry" value="yes" style="scale: 0.7;" form="registerForm">
+                <label for="taiwanYes" class="small" style="font-size: 10px; color: var(--white-2);">yes</label>
+            </div>
+            <label for="email">Imäl</label>
+            <input type="email" required name="email" id="email" form="registerForm" placeholder="Deine beschissene E-Mail, um deinen scheiß Posteingang mit sinnlosem Müll zu überfluten." style="font-size: 10px; height: 42px;">
+            <label for="name">Vor- und Nachname</label>
+            <input type="text" required name="name" id="name" form="registerForm" placeholder="Vor- und Nachname" maxlength="500">
+            <label for="birthday">Geboren am</label>
+            <input type="date" required name="birthday" id="birthday" form="registerForm" value="0001-12-24">
+            <label for="birthplace">Geburtsort</label>
+            <input type="text" required name="birthplace" id="birthplace" form="registerForm" placeholder="Geburtsort" maxlength="500">
+            <label for="birthweight">"Gewicht nach der Geburt in Tonnen</label>
+            <input type="number" required name="birthweight" id="birthweight" form="registerForm" placeholder="Gewicht nach der Geburt in Tonnen" max="100000000000000000000000" min="100">
+            <label for="passportuntil">Ablaufdatum Personalausweis</label>
+            <input type="date" required name="passportuntil" id="passportuntil" form="registerForm" value="2001-11-09">
+            <label for="versichertennummer">Versichertennummer</label>
+            <input type="text" required name="versichertennummer" id="versichertennummer" form="registerForm" placeholder="Versichertennummer" maxlength="500">
+            <label for="bankingnumber">Kontonummer</label>
+            <input type="text" required name="bankingnumber" id="bankingnumber" form="registerForm" placeholder="Kontonummer" maxlength="500">
+            <div class="consentBox">
+                <input type="checkbox" name="acceptPrivacy" id="acceptPrivacy" form="registerForm" value="true">
+                <label for="acceptPrivacy">Ich stimme zu, dass meine Privatsphäre nicht gesichert ist</label>
+            </div>
+            <div class="consentBox">
+                <input type="checkbox" name="acceptOrganDonation" id="acceptOrganDonation" form="registerForm" value="true">
+                <label for="acceptOrganDonation">Ich spende meine Organe freiwillig an Doktor Fred</label>
+            </div>
+            <div class="consentBox">
+                <input type="checkbox" name="acceptHamburger" id="acceptHamburger" form="registerForm" value="true">
+                <label for="acceptHamburger">Ich möchte einen kostenlosen crazy Hamburger geliefert bekommen</label>
+            </div>
+            <div class="consentBox">
+                <input type="checkbox" name="acceptChina" id="acceptChina" form="registerForm" value="true">
+                <label for="acceptChina">Ich stimme der Übergabe meiner Daten an die Chinesiche Regierung und einer 187% kostenlosen Ermordung bei zu niedrigem Social Credit Score zu</label>
+            </div>
+            <button type="submit" form="registerForm">Registrieren</button>
+        </form>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script src="/assets/js/assets.js"></script>
+</body>
+</html>
